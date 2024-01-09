@@ -77,13 +77,13 @@ Here's a simple example. We can use `DebugEngine` to break at line 2 (LoC indexe
 and then inspect variables using the `DebugEngine.ExamineVariables()` method.
 
 ```cs
-var breakpointLines = new[] { 1 }; // breakpoint at line 1
+var breakpointLines = new[] { 1 }; // breakpoint at line 2
 string inputCode = @"int x = 20;
 int y = 25;
 System.Console.WriteLine(x + y);
 ";
 var engine = new DebugEngine(breakpointLines, inputCode);
-engine.DebugAsync(); // stops at line 1
+engine.DebugAsync(); // stops at line 2
 
 foreach (var variable in engine.ExamineVariables())
 {

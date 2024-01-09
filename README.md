@@ -32,3 +32,74 @@ const string inputCode = "Console.WriteLine(\"Hello from DbgSharp!\");";
 await Microsoft.CodeAnalysis.CSharp.Scripting.CSharpScript.RunAsync(inputCode);
 ```
 
+### Interpreting C# scripts
+You can also interpret C# scripts by adding a new line and interpreting right away.
+This can help you build interpreters with C#.
+
+First, you need to instantiate the `Interpreter` class:
+```cs
+var interpreter = new Interpreter();
+```
+
+The `Interpret(String)` method of the `Interpreter` class interprets an additional
+line of given C# code. F.E.:
+```cs
+interpreter.Interpret("int x = 45;");
+interpreter.Interpret("System.Console.WriteLine(x);"); // outputs 45
+```
+
+### Debugging C# scripts
+As the main purpose of this library, you can also debug C# scripts.
+This is all done with the `DebugEngine` class, which implements `DbgSharp.IDebuggerEngine`.
+
+`DebugEngine` can take two possible constructors:
+<ul>
+  <li>
+    <code>
+      DebugEngine(String)
+    </code>
+    - Takes input code and interprets it
+  </li>
+  <li>
+    <code>
+      DebugEngine(Int32[], String)
+    </code>
+    - Takes breakpoints as array of `int`, which tell at
+    which line should breakpoints be triggered, and input
+    code as the 2nd parameter.
+  </li>
+</ul>
+
+The `DebugEngine.DebugAsync()` asynchronous method begins the debugging process. If
+you have breakpoints, `DebugEngine` will stop at the first breakpoint seen.
+
+Here's a simple example. We can use `DebugEngine` to break at line 2 (LoC indexes start with 0)
+and then inspect variables using the `DebugEngine.ExamineVariables()` method.
+
+```cs
+var breakpointLines = new[] { 1 }; // breakpoint at line 1
+string inputCode = @"int x = 20;
+int y = 25;
+System.Console.WriteLine(x + y);
+";
+var engine = new DebugEngine(breakpointLines, inputCode);
+engine.DebugAsync(); // stops at line 1
+
+foreach (var variable in engine.ExamineVariables())
+{
+    Console.WriteLine($"Name: {variable.Name}");
+    Console.WriteLine($"Value: {variable.Value}");
+}
+```
+The code above should produce the following output:
+```cs
+Name: x
+Value: 20
+```
+Oh, look at that. Where's our `y` variable?
+That's how DbgSharp works. When you add a breakpoint, instead of interpreting
+that line, the debugger just stops right away and allows debugging possible.
+
+# This is the first version
+And thus, DbgSharp has appeared somewhere on the internet, on January 9 2024!
+Is it going to be popular? Or not? I don't care. At least someone might need it. :)

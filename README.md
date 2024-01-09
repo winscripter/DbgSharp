@@ -5,6 +5,9 @@ a breakpoint. This is all done thanks to the powers of [Roslyn Compiler APIs](ht
 building a project, you'd have to install `Microsoft.CodeAnalysis.CSharp` and `Microsoft.CodeAnalysis.CSharp.Scripting` NuGet
 packages.
 
+# Compatibility
+DbgSharp is only compatible with .NET 6.0 and newer runtime versions. That being said, you cannot use DbgSharp in .NET 5.0, .NET Core, .NET Standard. Any version of .NET Framework is also not supported.
+
 ### Running C# scripts
 
 The `ScriptRunner` class takes a single method invocation to the Roslyn Scripting APIs.

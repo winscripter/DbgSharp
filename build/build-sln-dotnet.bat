@@ -2,3 +2,5 @@
 pushd ..\DbgSharp
 dotnet build --output %~dp0out-dotnet
 popd
+
+copy-res out-dotnet

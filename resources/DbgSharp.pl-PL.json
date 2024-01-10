@@ -1,0 +1,4 @@
+{
+    "ScriptExecError": "Wykonanie skryptu nie powiodło się z powodu następujących błędów:",
+    "StateIsNull": "Właściwość \"State\" jest równa NULL. Rozważ wyzwolenie punktu przerwania lub wstrzymanie/zatrzymanie debugera, aby uniknąć wyjątku NullReferenceException."
+}

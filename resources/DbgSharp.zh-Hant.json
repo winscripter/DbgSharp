@@ -1,0 +1,4 @@
+{
+    "ScriptExecError": "由於下列錯誤，腳本執行失敗:",
+    "StateIsNull": "\"State\" 屬性等於 NULL。請考慮觸發斷點或暫停/停止偵錯器以避免 NullReferenceException。"
+}

@@ -1,0 +1,4 @@
+{
+    "ScriptExecError": "La ejecución del script falló debido a los siguientes errores:",
+    "StateIsNull": "La propiedad \"State\" es igual a NULL. Considere activar un punto de interrupción o pausar/detener el depurador para evitar obtener una NullReferenceException."
+}

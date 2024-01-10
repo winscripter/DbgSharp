@@ -1,0 +1,4 @@
+{
+    "ScriptExecError": "由于以下错误，脚本执行失败:",
+    "StateIsNull": "\"State\" 属性等于 NULL。请考虑触发断点或暂停/停止调试器以避免出现 NullReferenceException。"
+}

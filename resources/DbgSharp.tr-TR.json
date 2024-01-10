@@ -1,0 +1,4 @@
+{
+    "ScriptExecError": "Komut dosyası yürütme işlemi aşağıdaki hatalardan dolayı başarısız oldu:",
+    "StateIsNull": "\"State\" özelliği NULL değerine eşittir. NullReferenceException almayı önlemek için bir kesme noktası tetiklemeyi veya hata ayıklayıcıyı duraklatmayı/durdurmayı düşünün."
+}

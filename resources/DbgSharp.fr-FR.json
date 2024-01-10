@@ -1,0 +1,4 @@
+{
+    "ScriptExecError": "L'exécution du script a échoué en raison des erreurs suivantes :",
+    "StateIsNull": "La propriété \"State\" est égale à NULL. Pensez à déclencher un point d'arrêt ou à mettre en pause/arrêter le débogueur pour éviter d'obtenir une NullReferenceException."
+}

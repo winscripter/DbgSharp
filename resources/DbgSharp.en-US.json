@@ -1,0 +1,4 @@
+{
+    "ScriptExecError": "Script execution failed due to the following errors:",
+    "StateIsNull": "The \"State\" property is equal to NULL. Consider triggering a breakpoint or pausing/stopping the debugger to avoid getting a NullReferenceException."
+}

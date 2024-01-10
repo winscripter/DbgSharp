@@ -1,0 +1,4 @@
+{
+    "ScriptExecError": "다음 오류로 인해 스크립트 실행에 실패했습니다:",
+    "StateIsNull": "\"State\" 속성은 NULL과 같습니다. NullReferenceException이 발생하지 않도록 하려면 중단점을 트리거하거나 디버거를 일시 중지/중지하는 것이 좋습니다."
+}

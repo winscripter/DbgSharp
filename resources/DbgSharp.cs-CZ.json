@@ -1,0 +1,4 @@
+{
+    "ScriptExecError": "Spuštění skriptu se nezdařilo kvůli následujícím chybám:",
+    "StateIsNull": "Vlastnost \"State\" je rovna hodnotě NULL. Zvažte spuštění bodu přerušení nebo pozastavení/zastavení ladicího programu, abyste se vyhnuli výjimce NullReferenceException."
+}

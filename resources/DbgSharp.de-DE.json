@@ -1,0 +1,4 @@
+{
+    "ScriptExecError": "Die Skriptausführung ist aufgrund der folgenden Fehler fehlgeschlagen:",
+    "StateIsNull": "Die Eigenschaft \"State\" ist gleich NULL. Erwägen Sie das Auslösen eines Haltepunkts oder das Anhalten/Stoppen des Debuggers, um eine NullReferenceException zu vermeiden."
+}

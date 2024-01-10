@@ -1,0 +1,4 @@
+{
+    "ScriptExecError": "次のエラーのため、スクリプトの実行に失敗しました:",
+    "StateIsNull": "\"State\" プロパティは NULL に等しいです。NullReferenceException の取得を避けるために、ブレークポイントをトリガーするか、デバッガーを一時停止/停止することを検討してください。"
+}
